@@ -1,0 +1,3 @@
+Variable assignment a = 4.5
+Variable assignment b = 2.5
+calculation expects 7 function returned 11.25
