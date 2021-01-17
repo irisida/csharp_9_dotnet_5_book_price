@@ -1,0 +1,7 @@
+assigned 5.5 to variable a
+assigned 4.5 to variable b
+Call add(5.5, 4.5) expected 10 received 10
+Trace error: True
+Trace warning: True
+Trace info: True
+Trace verbose: False
