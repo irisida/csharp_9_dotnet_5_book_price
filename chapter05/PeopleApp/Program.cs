@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Packt.Shared;
 
 namespace PeopleApp
@@ -7,6 +8,8 @@ namespace PeopleApp
     {
         static void Main(string[] args)
         {
+            //CultureInfo.CurrentCulture = new CultureInfo("en-GB", false);
+
             var p1 = new Person();
             p1.Name = "Swiss Tony";
             p1.DateOfBirth = new DateTime(1973, 12, 30);
@@ -34,6 +37,18 @@ namespace PeopleApp
                 WondersOfTheAncientWorld.TempleOfArtemisAtEphesus;
 
             DisplayValues(p3);
+
+            BankAccount.InterestRate = 0.022M;
+
+            var jonesAccount = new BankAccount();
+            jonesAccount.AccountName = "Mrs Jones";
+            jonesAccount.Balance = 3600;
+
+            Console.WriteLine(
+                format: "{0} earned {1:C} interest",
+                arg0: jonesAccount.AccountName,
+                arg1: jonesAccount.Balance * BankAccount.InterestRate
+            );
         }
 
         static void DisplayValues(Person p)
