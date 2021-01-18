@@ -13,26 +13,25 @@ namespace PeopleApp
             p1.BucketList = WondersOfTheAncientWorld.GreatPyramidOfGiza |
                 WondersOfTheAncientWorld.LighthouseOfAlexandria;
 
-
-            // using formatted strings
-            Console.WriteLine(
-                format: "{0} was born on {1:dddd, d, MMMM, yyyy}.",
-                arg0: p1.Name,
-                arg1: p1.DateOfBirth
-            );
-            Console.WriteLine($"{p1.Name}'s bucket list is: {p1.BucketList}");
+            DisplayValues(p1);
 
             var p2 = new Person();
             p2.Name = "Jac the hat";
             p2.DateOfBirth = new DateTime(1951, 1, 1);
-            p2.BucketList = WondersOfTheAncientWorld.MausoleumAtHalicarnassus | WondersOfTheAncientWorld.TempleOfArtemisAtEphesus;
+            p2.BucketList = WondersOfTheAncientWorld.MausoleumAtHalicarnassus |
+                WondersOfTheAncientWorld.TempleOfArtemisAtEphesus;
 
+            DisplayValues(p2);
+        }
+
+        static void DisplayValues(Person p)
+        {
             Console.WriteLine(
                 format: "{0} was born on {1:dd, MMM, yyyy}.",
-                arg0: p2.Name,
-                arg1: p2.DateOfBirth
+                arg0: p.Name,
+                arg1: p.DateOfBirth
             );
-            Console.WriteLine($"{p2.Name}'s bucket list is: {p2.BucketList}");
+            Console.WriteLine($"{p.Name}'s bucket list is: {p.BucketList}");
         }
     }
 }
