@@ -54,9 +54,10 @@ namespace PeopleApp
         static void DisplayValues(Person p)
         {
             Console.WriteLine(
-                format: "{0} was born on {1:dd, MMM, yyyy}.",
+                format: "{0} was born on {1:dd, MMM, yyyy}. Record created at: {2:HH:mm:ss} on {2:dddd dd-MMM-yyyy}.",
                 arg0: p.Name,
-                arg1: p.DateOfBirth
+                arg1: p.DateOfBirth,
+                arg2: p.Instantiated
             );
             Console.WriteLine($"{p.Name}'s bucket list is: {p.BucketList}");
 
