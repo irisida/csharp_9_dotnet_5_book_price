@@ -84,6 +84,16 @@ namespace PeopleApp
                 LastName = "Foshizzle"
             };
 
+            var car = new ImmutableVehicle
+            {
+                Brand = "Mazda 6",
+                Color = "Slate Grey",
+                Wheels = 4
+            };
+
+            var repaintedCar = car with { Color = "Graphite & Black" };
+            Console.WriteLine("original color was {0}, new color is {1}", arg0: car.Color, arg1: repaintedCar.Color);
+
 
         }
 
